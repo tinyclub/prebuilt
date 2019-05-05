@@ -12,7 +12,7 @@ TOOLCHAIN=$(ARM_URL)
 
 all:
 	wget -c $(TOOLCHAIN)
-	tar Jxf $(shell basename $(TOOLCHAIN))
+	tar Jxvf $(shell basename $(TOOLCHAIN))
 
 clean:
 	rm -rf $(TOOLCHAIN)
