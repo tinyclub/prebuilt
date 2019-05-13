@@ -33,7 +33,7 @@ list available docker images containing a full root with package management tool
   - i386/ubuntu
 
 * X86_64 / x86_64
-  - ubuntu 
+  - ubuntu
 
 ## More
 
