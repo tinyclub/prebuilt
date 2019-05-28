@@ -56,3 +56,17 @@ Run with docker:
 Run with chroot:
 
     $ tools/rootfs/docker/chroot.sh arm64v8/ubuntu
+
+## References
+
+* [Ubuntu rootfs][1]
+* [Ubuntu docker image][2]
+* [Debian rootfs][3]
+* [Debian docker image][4]
+* [Reproducible, snapshot-based Debian rootfs builder][5]
+
+[1]: https://partner-images.canonical.com/core/
+[2]: https://hub.docker.com/r/arm64v8/ubuntu
+[3]: https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-arm64v8
+[4]: https://hub.docker.com/r/arm64v8/debian
+[5]: https://github.com/debuerreotype/debuerreotype
