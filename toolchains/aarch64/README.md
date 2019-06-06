@@ -1,5 +1,5 @@
 
-# ARM toolchain
+# aarch64 toolchain
 
 https://releases.linaro.org/components/toolchain/binaries/
 
@@ -11,9 +11,10 @@ https://developer.arm.com/tools-and-software/open-source-software/developer-tool
 
 ## Configure and use it
 
-    $ vim boards/virt/Makefile
-    CCVER ?= 8.3-2019.03
-    CCPATH ?= $(PREBUILT_TOOLCHAINS)/$(XARCH)/gcc-arm-$(CCVER)-x86_64-aarch64-linux-gnu/bin/ 
+    $ vim boards/aarch64/virt/Makefile
+    CCPRE  ?= aarch64-linux-gnu-
+    CCVER  ?= 8.3-2019.03
+    CCPATH ?= $(PREBUILT_TOOLCHAINS)/$(XARCH)/gcc-arm-$(CCVER)-x86_64-aarch64-linux-gnu/bin/
 
 ## Use it
 

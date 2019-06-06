@@ -1,19 +1,20 @@
 
-# ARM toolchain
+# arm toolchain
 
-This is downloaded from http://newos.org/toolchains/arm-eabi-5.3.0-Linux-x86_64.tar.xz
+https://releases.linaro.org/components/toolchain/binaries/
 
-## Decompress
+## Download & Decompress
 
-    tar Jxf arm-eabi-5.3.0-Linux-x86_64.tar.xz -C /opt
+    $ make toolchain
 
-## Setting up environment in ~/.bashrc:
+## Configure and use it
 
-    export PATH=/opt/arm-eabi-5.3.0-Linux-x86_64/bin:$PATH
-    export LD_LIBRARY_PATH=/opt/arm-eabi-5.3.0-Linux-x86_64/lib:$LD_LIBRARY_PATH
+    $ vim boards/arm/versatilepb/Makefile
+    CCPRE  ?= arm-linux-gnueabi-
+    CCVER  ?= 7.4.1-2019.02
+    CCPATH ?= $(PREBUILT_TOOLCHAINS)/$(XARCH)/gcc-arm-$(CCVER)-x86_64-$(XARCH)-linux-gnueabi/bin/
 
-## Download, build and boot little kernel
+## Use it
 
-    git clone https://github.com/littlekernel/lk
-    cd lk
-    ./scripts/do-qemuarm
+    $ make kernel-defconfig
+    $ make kernel
